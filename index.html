@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>NYC Public Notary Practice Exam — 40 Questions</title>
+    <meta name="description" content="Free NYC Public Notary practice exam with 40 multiple-choice questions. Prepare for the New York State notary public examination.">
+    <meta name="keywords" content="practice exam, NYC notary practice exam, New York notary exam, notary public practice test, 40 questions practice exam, NYS notary study, notary exam prep, notary exam 2025, notary exam 2024, notary exam 2023, notary exam 2022">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Libre Baskerville', 'Georgia', 'serif'],
+                        sans: ['Source Sans 3', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        notary: {
+                            50: '#f8f6f0',
+                            100: '#ebe5d4',
+                            200: '#d9ccad',
+                            300: '#c4b080',
+                            400: '#b3965f',
+                            500: '#a6844f',
+                            600: '#8f6b43',
+                            700: '#735339',
+                            800: '#604633',
+                            900: '#513c2d',
+                        },
+                        seal: '#8b2942',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .option-card:hover { @apply border-seal/50 bg-notary-50; }
+        .option-card.selected { @apply border-seal bg-seal/10 ring-2 ring-seal/30; }
+        .option-card.correct { @apply border-emerald-600 bg-emerald-50; }
+        .option-card.incorrect { @apply border-red-500 bg-red-50; }
+        .progress-bar { transition: width 0.4s ease-out; }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 1rem); }
+        @media (max-width: 640px) {
+            .option-card { min-height: 48px; }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-notary-50 via-white to-notary-100 font-sans text-notary-900">
+    <div class="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-8 md:py-12 pb-safe">
+        <!-- Header -->
+        <header class="text-center mb-6 sm:mb-10">
+            <p class="text-lg sm:text-xl md:text-2xl text-notary-800 font-semibold mb-3 sm:mb-4">Candidate name: <span class="text-seal font-bold">Yuliya</span></p>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-seal/10 text-seal text-sm font-semibold mb-4">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.244 7.243a3.066 3.066 0 012.812 2.812 3.066 3.066 0 00.723 1.745 3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812z" clip-rule="evenodd"/></svg>
+                New York State
+            </div>
+            <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-notary-800">NYC Public Notary</h1>
+            <p class="mt-2 text-notary-600 font-medium text-sm sm:text-base">40 Questions Practice Exam</p>
+        </header>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="space-y-6">
+            <!-- 40 Questions Practice Exam Feature -->
+            <div class="bg-white rounded-2xl shadow-xl shadow-notary-200/50 p-8 md:p-12 border-2 border-seal/20 overflow-hidden relative">
+                <div class="absolute top-0 right-0 bg-seal text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2 sm:px-4 py-1 sm:py-1.5 rounded-bl-lg">
+                    Practice Exam
+                </div>
+                <div class="text-center">
+                    <h2 class="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-notary-800 mb-2">40 Questions Practice Exam</h2>
+                    <p class="text-notary-600 mb-4 sm:mb-6 text-sm sm:text-base">Select an exam year and test your knowledge of New York State notary public laws, procedures, and requirements.</p>
+                    <ul class="text-left max-w-sm mx-auto space-y-2 text-notary-600 mb-8">
+                        <li class="flex items-center gap-2"><span class="text-seal">✓</span> 40 multiple-choice questions</li>
+                        <li class="flex items-center gap-2"><span class="text-seal">✓</span> Based on NYS Department of State guidelines</li>
+                        <li class="flex items-center gap-2"><span class="text-seal">✓</span> Instant feedback with explanations</li>
+                    </ul>
+                    <!-- Exam Year Selection -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-2xl mx-auto mb-6 sm:mb-8">
+                        <button data-year="2025" class="exam-year-btn px-4 sm:px-6 py-3 sm:py-4 rounded-xl border-2 border-notary-200 hover:border-seal hover:bg-seal/5 active:bg-seal/10 transition-all duration-200 group min-h-[60px] sm:min-h-0">
+                            <span class="block font-serif text-lg sm:text-xl font-bold text-notary-800 group-hover:text-seal">2025</span>
+                            <span class="block text-xs sm:text-sm text-notary-500 mt-0.5">Practice Exam</span>
+                        </button>
+                        <button data-year="2024" class="exam-year-btn px-4 sm:px-6 py-3 sm:py-4 rounded-xl border-2 border-notary-200 hover:border-seal hover:bg-seal/5 active:bg-seal/10 transition-all duration-200 group min-h-[60px] sm:min-h-0">
+                            <span class="block font-serif text-lg sm:text-xl font-bold text-notary-800 group-hover:text-seal">2024</span>
+                            <span class="block text-xs sm:text-sm text-notary-500 mt-0.5">Practice Exam</span>
+                        </button>
+                        <button data-year="2023" class="exam-year-btn px-4 sm:px-6 py-3 sm:py-4 rounded-xl border-2 border-notary-200 hover:border-seal hover:bg-seal/5 active:bg-seal/10 transition-all duration-200 group min-h-[60px] sm:min-h-0">
+                            <span class="block font-serif text-lg sm:text-xl font-bold text-notary-800 group-hover:text-seal">2023</span>
+                            <span class="block text-xs sm:text-sm text-notary-500 mt-0.5">Practice Exam</span>
+                        </button>
+                        <button data-year="2022" class="exam-year-btn px-4 sm:px-6 py-3 sm:py-4 rounded-xl border-2 border-notary-200 hover:border-seal hover:bg-seal/5 active:bg-seal/10 transition-all duration-200 group min-h-[60px] sm:min-h-0">
+                            <span class="block font-serif text-lg sm:text-xl font-bold text-notary-800 group-hover:text-seal">2022</span>
+                            <span class="block text-xs sm:text-sm text-notary-500 mt-0.5">Practice Exam</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Container (hidden initially) -->
+        <div id="quiz-container" class="hidden">
+            <!-- Exam Year Badge & Candidate -->
+            <div class="mb-3 sm:mb-4 flex flex-wrap items-center gap-2 sm:gap-3">
+                <span id="exam-year-badge" class="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-seal/10 text-seal text-xs sm:text-sm font-semibold"></span>
+                <span class="text-notary-600 text-xs sm:text-sm">Candidate: <span class="font-semibold text-notary-800">Yuliya</span></span>
+            </div>
+            <!-- Progress -->
+            <div class="mb-4 sm:mb-8">
+                <div class="flex flex-col sm:flex-row sm:flex-wrap sm:justify-between sm:items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium text-notary-600 mb-2">
+                    <span>Question <span id="current-q">1</span> of 40</span>
+                    <div class="flex items-center gap-3 sm:gap-4">
+                        <span id="timer-display" class="inline-flex items-center gap-1.5 font-mono tabular-nums">
+                            <svg class="w-4 h-4 text-notary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span id="timer-value">0:00</span>
+                        </span>
+                        <span id="score-display" class="text-seal"></span>
+                    </div>
+                </div>
+                <div class="h-2 bg-notary-200 rounded-full overflow-hidden">
+                    <div id="progress-bar" class="progress-bar h-full bg-seal rounded-full" style="width: 2.5%"></div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="bg-white rounded-xl sm:rounded-2xl shadow-xl shadow-notary-200/50 p-4 sm:p-8 md:p-10 border border-notary-200/60">
+                <h2 id="question-text" class="font-serif text-base sm:text-xl md:text-2xl font-bold text-notary-800 mb-4 sm:mb-6 leading-relaxed"></h2>
+                <div id="options-container" class="space-y-2 sm:space-y-3"></div>
+                <div id="feedback" class="mt-4 sm:mt-6 p-3 sm:p-4 rounded-xl hidden text-sm sm:text-base"></div>
+                <div class="mt-6 sm:mt-8 flex flex-col-reverse sm:flex-row sm:flex-wrap sm:justify-between sm:items-center gap-3">
+                    <div class="flex gap-2 sm:gap-3 justify-center sm:justify-start">
+                        <button id="prev-btn" class="flex-1 sm:flex-none min-h-[44px] px-4 sm:px-5 py-2.5 text-notary-600 hover:text-seal font-medium transition-colors disabled:opacity-40 disabled:cursor-not-allowed text-sm sm:text-base" disabled>
+                            ← Previous
+                        </button>
+                        <button id="next-btn" class="flex-1 sm:flex-none min-h-[44px] px-4 sm:px-5 py-2.5 bg-seal hover:bg-seal/90 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base">
+                            Next →
+                        </button>
+                    </div>
+                    <button id="exit-exam-btn" class="w-full sm:w-auto min-h-[44px] px-5 py-2.5 text-red-600 hover:text-red-700 hover:bg-red-50 font-medium rounded-lg transition-colors text-sm sm:text-base">
+                        Exit Exam
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="hidden text-center bg-white rounded-xl sm:rounded-2xl shadow-xl shadow-notary-200/50 p-6 sm:p-10 md:p-14 border border-notary-200/60">
+            <div id="results-icon" class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 rounded-full flex items-center justify-center"></div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-notary-800 mb-2">Exam Complete, Yuliya</h2>
+            <p id="results-exam-year" class="text-notary-500 text-sm mb-2"></p>
+            <p id="results-score" class="text-xl sm:text-2xl font-semibold text-seal mb-4 sm:mb-6"></p>
+            <p id="results-message" class="text-notary-600 mb-6 sm:mb-8 max-w-md mx-auto text-sm sm:text-base px-1"></p>
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+                <button id="retry-btn" class="w-full sm:w-auto min-h-[48px] px-8 sm:px-10 py-3 sm:py-4 bg-seal hover:bg-seal/90 text-white font-semibold rounded-xl shadow-lg transition-all text-sm sm:text-base">
+                    Try Again
+                </button>
+                <button id="back-to-exams-btn" class="w-full sm:w-auto min-h-[48px] px-8 sm:px-10 py-3 sm:py-4 bg-notary-200 hover:bg-notary-300 text-notary-800 font-semibold rounded-xl transition-all text-sm sm:text-base">
+                    Choose Another Exam
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-8 sm:mt-16 pt-6 sm:pt-8 pb-4 text-center text-notary-500 text-xs sm:text-sm border-t border-notary-200/60">
+            <p>Developed by Mark © 2026. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
